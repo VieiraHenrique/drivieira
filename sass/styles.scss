@@ -1,0 +1,12 @@
+/* BASE */
+
+@import "utilities/vars";
+@import "utilities/mixins";
+@import "utilities/reset";
+@import "utilities/typo";
+
+/* SECTIONS */
+@import "sections/header";
+@import "sections/hero";
+@import "sections/about";
+@import "sections/soulcollage";

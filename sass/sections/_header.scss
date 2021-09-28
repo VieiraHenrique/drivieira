@@ -1,0 +1,134 @@
+.header {
+  @include container($laptop13);
+  height: 140px;
+  @include shadow;
+
+  .wrapper {
+    height: 100%;
+    @include flex(row, space-between, center);
+  }
+
+  &__logo {
+    a {
+      @include flex(row, center, center, 20px);
+      color: $black;
+      @include fontRegular;
+      font-size: 20px;
+
+      img {
+        width: 50px;
+      }
+
+      span {
+        display: block;
+      }
+
+      .logo-text {
+        @include flex(column, center, flex-start, 3px);
+      }
+
+      .main-logo {
+        font-size: 44px;
+      }
+
+      .second-logo {
+        color: $mainColor;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__nav {
+    #toggle {
+      display: none;
+    }
+
+    label {
+      span,
+      span::before,
+      span::after {
+        @include pseudo;
+        position: relative;
+        width: 33px;
+        height: 3px;
+        border-radius: 10px;
+        background: $mainColor;
+        @include transition;
+      }
+
+      span::before,
+      span::after {
+        position: absolute;
+      }
+
+      span::before {
+        top: -7px;
+      }
+
+      span::after {
+        bottom: -7px;
+        width: 25px;
+      }
+    }
+
+    &--menu {
+      @include flex(column, center, center, 20px);
+      position: fixed;
+      top: 140px;
+      right: -100vw;
+      width: 100vw;
+      height: calc(100vh - 140px);
+      background: $mainColor-dark;
+      @include transition;
+      a {
+        color: $white;
+        font-size: 17px;
+      }
+    }
+
+    #toggle:checked ~ &--menu {
+      right: 0;
+    }
+
+    #toggle:checked ~ label span {
+      transform: rotate(45deg);
+    }
+    #toggle:checked ~ label span::before {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #toggle:checked ~ label span::after {
+      opacity: 0;
+    }
+
+    @include laptop13 {
+      label {
+        display: none;
+      }
+
+      &--menu {
+        all: unset;
+        list-style: none;
+        @include flex(row, center, center, 20px);
+
+        a {
+          color: $black;
+          position: relative;
+
+          &::after {
+            @include pseudo;
+            width: 0%;
+            height: 2px;
+            background: $mainColor-light;
+            bottom: -8px;
+            @include transition;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

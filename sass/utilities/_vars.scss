@@ -1,0 +1,23 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+
+@mixin fontLight {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+}
+@mixin fontRegular {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+@mixin fontBold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/* COLORS */
+
+$white: #fff;
+$black: #3f3f3f;
+$mainColor: #208fcf;
+$mainColor-light: lighten($mainColor, 15%);
+$mainColor-dark: darken($mainColor, 15%);
