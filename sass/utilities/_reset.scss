@@ -12,9 +12,9 @@ html {
 }
 
 body {
+  background: url("/img/bg.jpg");
   @include fontRegular;
   overflow-x: hidden;
-  min-height: 150vh;
 }
 
 body::-webkit-scrollbar {
@@ -60,7 +60,6 @@ textarea {
 .container {
   max-width: $laptop;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .hidden {
@@ -81,4 +80,10 @@ textarea {
 
 .center {
   text-align: center;
+}
+
+.bg-white {
+  background: #fefefe;
+  margin-top: 20px;
+  border-radius: 5px;
 }

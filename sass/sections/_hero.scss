@@ -1,6 +1,6 @@
 .hero {
-  @include container(1024px);
-  @include separator(30px, 30px, 0, 0);
+  @include container($ipadPro);
+  @include separator(0, 0, 30px, 30px);
   align-items: center;
 
   &__img {
