@@ -1,8 +1,13 @@
 .soulcollage {
-    @include container($ipadPro);
-    @include separator(50px,50px,0,0)
-    
-    .wrapper {
-        grid-column: 9/-2;
-      }
+  @include container($ipadPro);
+  @include separator(50px, 50px, 0, 0);
+  align-items: center;
+
+  &-img {
+    grid-column: 2/7;
+  }
+
+  .wrapper {
+    grid-column: 9/-2;
+  }
 }
