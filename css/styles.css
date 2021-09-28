@@ -24,25 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  width: 5px;
-  /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: #dbdbdb;
-  /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #57b1e5;
-  /* color of the scroll thumb */
-  border-radius: 100px;
-  /* roundness of the scroll thumb */
-  /* border: 3px solid orange; */
-  /* creates padding around scroll thumb */
-}
-
 img {
   max-width: 100%;
 }
@@ -94,16 +75,17 @@ textarea {
 
 .btn:hover {
   background: #57b1e5;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .center {
   text-align: center;
 }
 
-.bg-white {
+.bigContainer {
+  max-width: 1280px;
+  margin: 0 auto;
   background: #fefefe;
-  margin-top: 20px;
-  border-radius: 5px;
 }
 
 /* TEXT */
@@ -173,9 +155,15 @@ a {
 
 /* SECTIONS */
 .header {
-  padding: 30px;
+  display: grid;
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   height: 140px;
   box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header > * {
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .header .wrapper {
@@ -393,7 +381,7 @@ a {
 
 .about {
   display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 0;
@@ -405,17 +393,29 @@ a {
   grid-row: 1;
 }
 
-.professional {
+.about .wrapper {
+  grid-column: 2/7;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.soulcollage {
   display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.professional > * {
+.soulcollage > * {
   grid-column: container-start / container-end;
   grid-row: 1;
+}
+
+.soulcollage .wrapper {
+  grid-column: 9/-2;
 }
 /*# sourceMappingURL=styles.css.map */

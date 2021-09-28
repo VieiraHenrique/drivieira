@@ -1,5 +1,5 @@
 .header {
-  padding: 30px;
+  @include container($ipadPro);
   height: 140px;
   @include shadow;
 

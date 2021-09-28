@@ -17,17 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  width: 5px; /* width of the entire scrollbar */
-}
-body::-webkit-scrollbar-track {
-  background: #dbdbdb; /* color of the tracking area */
-}
-body::-webkit-scrollbar-thumb {
-  background-color: $mainColor-light; /* color of the scroll thumb */
-  border-radius: 100px; /* roundness of the scroll thumb */
-  /* border: 3px solid orange; */ /* creates padding around scroll thumb */
-}
 
 img {
   max-width: 100%;
@@ -75,6 +64,7 @@ textarea {
   border-radius: 100px;
   &:hover {
     background: $mainColor-light;
+    @include shadow;
   }
 }
 
@@ -82,8 +72,8 @@ textarea {
   text-align: center;
 }
 
-.bg-white {
+.bigContainer{
+  max-width: $laptop13;
+  margin: 0 auto;
   background: #fefefe;
-  margin-top: 20px;
-  border-radius: 5px;
 }

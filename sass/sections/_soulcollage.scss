@@ -1,4 +1,8 @@
-.professional {
-    @include container($ipad);
+.soulcollage {
+    @include container($ipadPro);
     @include separator(50px,50px,0,0)
+    
+    .wrapper {
+        grid-column: 9/-2;
+      }
 }
