@@ -1,7 +1,7 @@
 .group {
   @include container($ipadPro);
-  @include separator(50px, 50px, 0, 0);
   align-items: center;
+  margin-top: 50px;
 
   .wrapper {
     grid-column: 2/-2;
