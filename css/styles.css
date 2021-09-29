@@ -395,7 +395,13 @@ a {
 }
 
 .about .wrapper {
-  grid-column: 2/7;
+  grid-column: 2/-2;
+}
+
+@media screen and (min-width: 1024px) {
+  .about .wrapper {
+    grid-column: 2/8;
+  }
 }
 
 .soulcollage {
@@ -414,11 +420,30 @@ a {
 }
 
 .soulcollage-img {
-  grid-column: 2/7;
+  grid-column: 2/-2;
+  grid-row: 1;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .soulcollage-img {
+    grid-column: 2/7;
+    margin-bottom: 0;
+  }
 }
 
 .soulcollage .wrapper {
-  grid-column: 9/-2;
+  text-align: center;
+  grid-column: 2/-2;
+  grid-row: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .soulcollage .wrapper {
+    grid-column: 9/-2;
+    grid-row: 1;
+    text-align: left;
+  }
 }
 
 .group {
@@ -437,6 +462,12 @@ a {
 }
 
 .group .wrapper {
-  grid-column: 2/8;
+  grid-column: 2/-2;
+}
+
+@media screen and (min-width: 1024px) {
+  .group .wrapper {
+    grid-column: 2/8;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

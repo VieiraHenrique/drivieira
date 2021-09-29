@@ -4,10 +4,24 @@
   align-items: center;
 
   &-img {
-    grid-column: 2/7;
+    grid-column: 2/-2;
+    grid-row: 1;
+    margin-bottom: 50px;
+    @include ipadPro {
+      grid-column: 2/7;
+      margin-bottom: 0;
+    }
   }
-
+  
   .wrapper {
-    grid-column: 9/-2;
+    text-align: center;
+    grid-column: 2/-2;
+    grid-row: 2;
+    @include ipadPro {
+      grid-column: 9/-2;
+      grid-row: 1;
+      text-align: left;
+    }
+  
   }
 }
