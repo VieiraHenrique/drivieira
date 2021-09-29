@@ -1,27 +1,25 @@
 .group {
-    @include container($ipadPro);
-    @include separator(50px, 50px, 0, 0);
-    align-items: center;
-  
-    .wrapper {
-      grid-column: 2/-2;
-      
-      @include ipadPro {
-        grid-column: 5/11;
-        
-      }
-    }
+  @include container($ipadPro);
+  @include separator(50px, 50px, 0, 0);
+  align-items: center;
 
-    &-img {
-      max-width: 100%;
-      grid-column: 2/-2;
-      grid-row: 2;
-      margin-top: 50px;
+  .wrapper {
+    grid-column: 2/-2;
 
-      img {
-        max-width: 100%;
-        box-shadow: $shadow-medium;
-      }
-
+    @include ipadPro {
+      grid-column: 5/11;
     }
   }
+
+  &-img {
+    max-width: 100%;
+    grid-column: 2/-2;
+    grid-row: 2;
+    margin-top: 50px;
+
+    img {
+      max-width: 100%;
+      box-shadow: $shadow-medium;
+    }
+  }
+}
