@@ -64,7 +64,7 @@ textarea {
   border-radius: 100px;
   &:hover {
     background: $mainColor-light;
-    @include shadow;
+    box-shadow: 0 3px 5px rgba($color: #000000, $alpha: .2);
   }
 }
 

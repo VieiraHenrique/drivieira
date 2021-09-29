@@ -1,0 +1,30 @@
+.soulcollage2 {
+  @include container($ipadPro);
+  margin-top: 30px;
+
+  .wrapper {
+    grid-column: 2/-2;
+    text-align: center;
+
+    @include ipadPro {
+      text-align: left;
+      grid-column: 2/8;
+    }
+  }
+
+  &-img {
+    margin-top: 50px;
+    grid-column: 2/-2;
+    grid-row: 2;
+
+    img {
+        box-shadow: $shadow-dark;
+    }
+
+    @include ipadPro {
+      margin-top: 0;
+      grid-column: 9/-2;
+      grid-row: 1;
+    }
+  }
+}

@@ -21,3 +21,9 @@ $black: #3f3f3f;
 $mainColor: #208fcf;
 $mainColor-light: lighten($mainColor, 15%);
 $mainColor-dark: darken($mainColor, 15%);
+
+/* SHADOWS */
+
+$shadow-light: -2px 2px 10px rgba(#000, .07);
+$shadow-medium: 0px 7px 20px rgba(#000, .2);
+$shadow-dark: 0px 20px 40px rgba(#000, .3);
