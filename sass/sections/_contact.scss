@@ -1,0 +1,35 @@
+.contact {
+  @include container($ipadPro);
+  @include separator(50px, 0, 0, 100px);
+  text-align: center;
+
+  .wrapper {
+    grid-column: 4/12;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    i {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      
+      font-size: 45px;
+      text-align: center;
+      line-height: 70px;
+      color: $white;
+    }
+
+    .insta {
+        background: linear-gradient(to bottom right, rgb(238, 186, 43), rgb(238, 43, 163));
+    }
+
+    .whatsapp {
+        background: rgb(58, 153, 86);
+    }
+  }
+}

@@ -126,9 +126,30 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   h2 {
     font-size: 35px;
+    line-height: 1.5;
+  }
+}
+
+h3 {
+  margin: 24px 0;
+  color: #16618d;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 1280px) {
+  h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h3 {
+    font-size: 22px;
     line-height: 1.5;
   }
 }
@@ -215,7 +236,7 @@ a {
 
 .header__logo a .second-logo {
   color: #208fcf;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .header__nav #toggle {
@@ -322,7 +343,7 @@ a {
 .hero {
   display: grid;
   grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 0;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -375,6 +396,10 @@ a {
   line-height: 1.15;
 }
 
+.hero__text .bold {
+  font-weight: 600;
+}
+
 .hero__text .btn {
   margin-bottom: 50px;
 }
@@ -393,6 +418,7 @@ a {
   margin-bottom: 50px;
   padding-top: 0;
   padding-bottom: 0;
+  text-align: center;
 }
 
 .about > * {
@@ -406,7 +432,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .about .wrapper {
-    grid-column: 2/8;
+    grid-column: 4/11;
   }
 }
 
@@ -521,5 +547,49 @@ a {
 .group-img img {
   max-width: 100%;
   box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.contact > * {
+  grid-column: container-start / container-end;
+  grid-row: 1;
+}
+
+.contact .wrapper {
+  grid-column: 4/12;
+}
+
+.contact .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact .social i {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 45px;
+  text-align: center;
+  line-height: 70px;
+  color: #fff;
+}
+
+.contact .social .insta {
+  background: linear-gradient(to bottom right, #eeba2b, #ee2ba3);
+}
+
+.contact .social .whatsapp {
+  background: #3a9956;
 }
 /*# sourceMappingURL=styles.css.map */
