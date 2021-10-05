@@ -1,5 +1,5 @@
 .soulcollage {
-  @include container($ipadPro);
+  @include container($laptop);
   align-items: center;
 
   &-img {
