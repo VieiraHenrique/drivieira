@@ -1,0 +1,9 @@
+.message {
+    @include separator(0,0,20px,20px);
+    background: $black;
+    color: $white;
+    
+    p {
+        text-align: center;
+    }
+}

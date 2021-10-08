@@ -1,38 +1,21 @@
 .hero {
-  @include container($laptop);
-  @include separator(30px, 0, 30px, 30px);
+  @include grid(1fr 1fr);
+  @include separator(30px, 0, 0, 0px);
+  grid-template-areas: "txt img";
   align-items: center;
+  min-height: 70vh;
 
   &__img {
-    grid-row: 2;
-    grid-column: 2/-2;
-    display: grid;
-    place-items: center;
-
-    img {
-      width: 320px;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid $black;
-      box-shadow: $shadow-dark;
-    }
-
-    @include ipadPro {
-      grid-column: 8/-2;
-      grid-row: 1;
-
-      img {
-        width: 500px;
-        height: 500px;
-      }
-    }
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    background: url("/img/dri2.png");
+    background-size: cover;
   }
 
   &__text {
-    grid-column: 2/-2;
-    grid-row: 1;
-    text-align: center;
+    grid-area: txt;
+    padding: 10%;
 
     h1 {
       color: $black;
@@ -47,11 +30,6 @@
 
     .btn {
       margin-bottom: 50px;
-    }
-
-    @include ipadPro {
-      grid-column: 2/7;
-      text-align: left;
     }
   }
 }

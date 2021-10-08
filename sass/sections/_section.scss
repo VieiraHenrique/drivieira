@@ -1,0 +1,29 @@
+.section {
+  @include grid(1fr 1fr);
+  min-height: 700px;
+
+  &__img {
+    grid-area: img;
+    background-size: cover;
+  }
+  
+  &__text {
+      grid-area: txt;
+      padding: 20%;
+      display: grid;
+      place-items: center;
+
+      h2 {
+          margin-bottom: 30px;
+      }
+
+      ul {
+          list-style: disc;
+
+          li {
+              line-height: 1.4;
+              margin-bottom: 20px;
+          }
+      }
+  }
+}

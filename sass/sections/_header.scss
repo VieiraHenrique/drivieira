@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   @include container($laptop);
   height: 140px;
   box-shadow: -2px 5px 10px rgba($color: #000000, $alpha: 0.03);
@@ -87,8 +92,22 @@
       background: $mainColor-dark;
       @include transition;
       a {
-        color: $white;
-        font-size: 17px;
+
+        img {
+          width: 30px;
+          transform: translateY(3px);
+          margin: 0;
+        }
+
+        i {
+          font-size: 30px;
+        }
+        .fa-instagram {
+          color: rgb(255, 178, 35);
+        }
+        .fa-whatsapp {
+          color: rgb(49, 117, 4);
+        }
       }
     }
 
@@ -118,20 +137,8 @@
         @include flex(row, center, center, 20px);
 
         a {
-          color: $black;
-          position: relative;
-
-          &::after {
-            @include pseudo;
-            width: 0%;
-            height: 2px;
-            background: $mainColor-light;
-            bottom: -8px;
-            @include transition;
-          }
-
-          &:hover::after {
-            width: 100%;
+          i {
+            font-size: 30px;
           }
         }
       }
