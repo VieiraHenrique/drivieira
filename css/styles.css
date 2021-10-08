@@ -374,7 +374,7 @@ a {
   grid-area: img;
   width: 100%;
   height: 100%;
-  background: url("img/dri2.png");
+  background: url("https://vieirahenrique.github.io/drivieira/img/dri2.png");
   background-size: cover;
 }
 
@@ -450,7 +450,7 @@ a {
 }
 
 .one .section__img {
-  background-image: url("img/hero.jpg");
+  background-image: url("https://vieirahenrique.github.io/drivieira/img/hero.jpg");
 }
 
 .two {
@@ -458,7 +458,7 @@ a {
 }
 
 .two .section__img {
-  background-image: url("img/img1.jpg");
+  background-image: url("https://vieirahenrique.github.io/drivieira/img/img1.jpg");
 }
 
 .three {
@@ -466,6 +466,6 @@ a {
 }
 
 .three .section__img {
-  background-image: url("img/img2.jpg");
+  background-image: url("https://vieirahenrique.github.io/drivieira/img/img2.jpg");
 }
 /*# sourceMappingURL=styles.css.map */
